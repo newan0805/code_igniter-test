@@ -19,9 +19,6 @@ $routes -> setAutoRoute(true);
 // $routes->get('/shop/adminCheck', 'Shop::adminCheck');
 
 $routes->add('/shop/product/(:any)/(:any)', 'Shop::product/$1/$2');
-$routes -> add('blog', function () {
-    return "<h2>This is a blog</h2>";
-});
 
 $routes -> group('admin', function ($routes) {
     $routes -> add('user', 'Admin\Users::index');
